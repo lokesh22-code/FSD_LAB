@@ -1,0 +1,64 @@
+<!-- Write a JavaScript program that defines a user-defined object with properties, methods, 
+accessors, and constructors. Display the object's properties and invoke its methods to 
+demonstrate functionality.  -->
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Car Object Demonstration</h2>
+    <div id="display"></div>
+
+    <script>
+        // 1. Defining the Class (The Blueprint)
+        class Car {
+            // CONSTRUCTOR: Initializes properties when a new object is created
+            constructor(brand, model, speed) {
+                this.brand = brand;
+                this.model = model;
+                this._speed = speed; // Using underscore for private-like property
+            }
+
+            // METHOD: A function that performs an action
+            drive() {
+                return `The ${this.brand} ${this.model} is driving at ${this._speed} km/h.`;
+            }
+
+            // ACCESSOR (GETTER): Allows you to access a property with logic
+            get status() {
+                return this._speed > 0 ? "Moving" : "Stopped";
+            }
+
+            // ACCESSOR (SETTER): Allows you to change a property with validation
+            set updateSpeed(newSpeed) {
+                if (newSpeed >= 0) {
+                    this._speed = newSpeed;
+                } else {
+                    console.error("Speed cannot be negative!");
+                }
+            }
+        }
+
+        // 2. Creating (Instantiating) the Object
+        const myCar = new Car("Tesla", "Model 3", 60);
+
+        // 3. Displaying Properties and Invoking Methods
+        let output = "";
+        
+        // Show initial properties
+        output += "<b>Initial Brand:</b> " + myCar.brand + "<br>";
+        output += "<b>Initial Status:</b> " + myCar.status + "<br>"; // Calling the getter
+        
+        // Invoke a method
+        output += "<b>Method Call:</b> " + myCar.drive() + "<br>";
+
+        // Use the setter to change speed
+        myCar.updateSpeed = 100;
+        output += "<b>After Speed Update:</b> " + myCar.drive() + "<br>";
+
+        // Display results on the webpage
+        document.getElementById("display").innerHTML = output;
+
+    </script>
+
+</body>
+</html>

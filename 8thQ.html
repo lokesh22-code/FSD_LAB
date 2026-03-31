@@ -1,0 +1,40 @@
+<!-- Apply different types of CSS styles inline, internal, and external to HTML elements. 
+Demonstrate the use of various selectors, properties, and values to style the content 
+effectively.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styles Demo</title>
+    
+    <link rel="stylesheet" type="text/css" href="8thQ.css">
+
+    <style>
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">Understanding CSS Styles</h1>
+
+    <div class="box">
+        <p class="highlight-text">This paragraph uses an External Class selector.</p>
+        
+        <p>This paragraph uses Internal CSS for its font size and line height.</p>
+
+        <p style="color: red; border-bottom: 2px dashed red;">
+            This paragraph uses <b>Inline CSS</b> to turn the text red.
+        </p>
+    </div>
+
+</body>
+</html>

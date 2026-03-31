@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2 id="myHeading">Original Heading</h2>
+    <p id="myPara">This is the original text of the paragraph.</p>
+    
+    <img id="myImage" src="https://via.placeholder.com/200/blue" alt="Blue Square" style="display:block; margin-bottom:10px;">
+
+    <button onclick="changeContent()">Click to Change Everything</button>
+
+    <script>
+        function changeContent() {
+            // 1. Change the text of the heading
+            document.getElementById("myHeading").innerHTML = "Content Updated!";
+
+            // 2. Change the text of the paragraph
+            document.getElementById("myPara").innerHTML = "The JavaScript code has modified this text successfully.";
+
+            // 3. Change the source (src) of the image
+            document.getElementById("myImage").src = "https://via.placeholder.com/200/orange";
+        }
+    </script>
+
+</body>
+</html>

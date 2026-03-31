@@ -1,0 +1,17 @@
+/* Element Selector: Styles all <body> tags */
+body {
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+}
+
+/* Class Selector: Used for multiple elements (.name) */
+.highlight-text {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* ID Selector: Used for one unique element (#name) */
+#main-title {
+    text-decoration: underline;
+    text-align: center;
+}
