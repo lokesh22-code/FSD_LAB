@@ -1,41 +1,39 @@
-<!-- Develop a JavaScript program that uses window object properties and methods. 
-Implement features like opening a new window, displaying alerts, and retrieving the 
-window's dimensions. -->
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Window Object</title>
+</head>
 <body>
 
-    <h2>JavaScript Window Object Demo</h2>
+<h2>Window Object Example</h2>
 
-    <button onclick="getDimensions()">Get Window Dimensions</button>
-    <button onclick="showAlert()">Show Alert</button>
-    <button onclick="openNewWindow()">Open Google</button>
+<button onclick="showAlert()">Show Alert</button>
+<br><br>
 
-    <p id="info"></p>
+<button onclick="openWindow()">Open Google</button>
+<br><br>
 
-    <script>
-        // 1. Retrieving Window Dimensions
-        // USES: window.innerWidth and window.innerHeight
-        function getDimensions() {
-            let w = window.innerWidth;
-            let h = window.innerHeight;
-            document.getElementById("info").innerHTML = 
-                "Browser width: <b>" + w + "px</b>, Height: <b>" + h + "px</b>";
-        }
+<button onclick="showSize()">Show Window Size</button>
 
-        // 2. Displaying an Alert
-        // USES: window.alert()
-        function showAlert() {
-            window.alert("This is a standard window alert box!");
-        }
+<p id="output"></p>
 
-        // 3. Opening a New Window
-        // USES: window.open(URL, name, specifications)
-        function openNewWindow() {
-            // Opens a small 500x500 window
-            window.open("https://www.google.com", "_blank", "width=500,height=500");
-        }
-    </script>
+<script>
+
+function showAlert() {
+    alert("Hello User!");
+}
+
+function openWindow() {
+    window.open("https://www.google.com");
+}
+
+function showSize() {
+    document.getElementById("output").innerHTML =
+        "Width: " + window.innerWidth + 
+        " Height: " + window.innerHeight;
+}
+
+</script>
 
 </body>
-</html> 
+</html>
