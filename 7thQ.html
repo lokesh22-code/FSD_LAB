@@ -1,25 +1,27 @@
 <!-- Embed audio and video elements into an HTML webpage using the appropriate HTML5 
 tags. Ensure that the media controls are available for user interaction.  -->
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Media Gallery</title>
-</head>
 <body>
 
-    <h2>Audio Player</h2>
-    <audio controls>
-        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<h3>Audio</h3>
+<audio id="a" controls autoplay loop src="audio.mp3"></audio><br>
+<button onclick="a.currentTime-=2">⏪</button>
+<button onclick="a.currentTime+=2">⏩</button>
+<button onclick="a.playbackRate=0.5">0.5x</button>
+<button onclick="a.playbackRate=1">1x</button>
+<button onclick="a.playbackRate=2">2x</button>
+<button onclick="a.muted=!a.muted">🔇 Mute</button>
 
-    <hr>
-
-    <h2>Video Player</h2>
-    <video width="400" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video element.
-    </video>
+<h3>Video</h3>
+<video id="v" controls autoplay loop width="300" src="video.mp4"></video><br>
+<button onclick="v.currentTime-=2">⏪</button>
+<button onclick="v.currentTime+=2">⏩</button>
+<button onclick="v.playbackRate=0.5">0.5x</button>
+<button onclick="v.playbackRate=1">1x</button>
+<button onclick="v.playbackRate=2">2x</button>
+<button onclick="v.muted=!v.muted">🔇 Mute</button>
 
 </body>
 </html>
